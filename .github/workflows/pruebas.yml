@@ -1,9 +1,8 @@
-name: Pruebas unitarias
-on:
-  push:
-    branches: [ master ]
+name: Pruebas unitarias Ivan Dario
+on: [push]
+
 jobs:
-  job1:
+  build:
     name: Pruebas
     runs-on: ubuntu-latest
     steps:
@@ -12,8 +11,9 @@ jobs:
     - name: Configuración de entorno de python
       uses: actions/setup-python@v2
       with:
-          python-version: '3.7'
+          python-version: 3.8.3
     - name: Correr pruebas
       id: correr-pruebas
-      run: python -m unittest -v tests/test_persona.py
+      run: |
+          python -m unittest -v tests/test_persona.py
       
