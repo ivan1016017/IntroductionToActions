@@ -5,7 +5,7 @@ on:
 jobs:
   Mi-primer-job:
     name: Mi primer job
-    runs-on: ubuntu-latest
+    runs-on: [ubuntu-latest, windows-latest, macOS-latest]
     outputs:
       salida: ${{ steps.imprimir.outputs.respuesta }}
     steps:
