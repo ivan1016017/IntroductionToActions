@@ -1,0 +1,16 @@
+name: Hola mundo
+on:
+  push:
+    branches: [ master ]
+jobs:
+  Mi-primer-job:
+    name: Mi primer job
+    runs-on: microsoft-latest
+    steps:
+    - name: Imprimir 
+      env:
+        MI_VARIABLE: Hola mundo
+      run: |
+        echo $MI_VARIABLE.
+
+          
