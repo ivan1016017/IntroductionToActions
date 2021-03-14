@@ -15,7 +15,7 @@ class PersonaTestCase(unittest.TestCase):
       self.grupo = [self.persona1, self.persona2, self.persona3] #new line line line line
 
    def test_constructor(self):
-      self.assertEqual(self.persona1.dar_nombre(), 'Alejandra') #completed
+      self.assertEqual(self.persona1.dar_nombre(), 'Alejandra') #completed line
       self.assertEqual(self.persona1.dar_edad(), 25) #
       self.assertEqual(self.persona2.dar_edad(),22)
 
