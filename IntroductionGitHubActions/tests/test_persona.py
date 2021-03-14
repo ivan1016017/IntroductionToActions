@@ -16,7 +16,7 @@ class PersonaTestCase(unittest.TestCase):
 
    def test_constructor(self):
       self.assertEqual(self.persona1.dar_nombre(), 'Alejandra')
-      self.assertEqual(self.persona1.dar_edad(), 25)
+      self.assertEqual(self.persona1.dar_edad(), 25) #
       self.assertEqual(self.persona2.dar_edad(),22)
 
    def test_anio_nacimiento(self):
@@ -27,8 +27,8 @@ class PersonaTestCase(unittest.TestCase):
 
    def test_asingacion(self):
       self.persona2.asignar_edad(28)
-      self.persona2.asignar_nombre("Felipe")
-      self.assertFalse(self.persona2.dar_nombre()=='Diego')
+      self.persona2.asignar_nombre("Felipe") # New
+      self.assertFalse(self.persona2.dar_nombre()=='Diego') # new
       self.assertFalse(self.persona2.dar_edad()==22)
       self.assertTrue(self.persona2.dar_nombre()=='Felipe')
       self.assertTrue(self.persona2.dar_edad()==28)
