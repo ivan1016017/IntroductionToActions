@@ -1,14 +1,40 @@
+# This is a basic workflow to help you get started with Actions
 
-on: push
-name: on push
+name: Pruebas unitarias
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ master]
+  pull_request:
+    branches: [ master ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  gitHubActionForPytest:
-    name: GitHub Action for pytest
+  # This workflow contains a single job called "build"
+  job1:
+    # The type of runner that the job will run on
+    name : Pruebas
     runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - uses: actions/checkout@master
-    - name: GitHub Action for pytest
-      uses: cclauss/GitHub-Action-for-pytest@master
-      with:
-        args: python setup.py develop && pytest
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      # Runs a single command using the runners shell
+      - name: Correr pruebas
+        id: correr-pruebas
+      
+        run: python -m unittest -v tests/test_lista_actividades.py
+
+      # Runs a set of commands using the runners shell
+      - name: Calculo de cubrimiento
+        run: |
+          coverage run -m unittest tests/test_lista_actividades.py
+          coverage report -m
   
