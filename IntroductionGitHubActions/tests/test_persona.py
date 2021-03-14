@@ -30,7 +30,7 @@ class PersonaTestCase(unittest.TestCase):
       self.persona2.asignar_nombre("Felipe") # New line line
       self.assertFalse(self.persona2.dar_nombre()=='Diego')
       self.assertFalse(self.persona2.dar_edad()==22)
-      self.assertTrue(self.persona2.dar_nombre()=='Felipe')
+      self.assertTrue(self.persona2.dar_nombre()=='Felipe') #new line
       self.assertTrue(self.persona2.dar_edad()==28)
 
    def test_objetos_iguales(self):
