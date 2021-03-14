@@ -1,15 +1,9 @@
 name: Hola mundo
-on:
-  push:
-    branches: [ master ]
-name: Hola mundo
-on:
-  push:
-    branches: [ master ]
+on: [push]
 jobs:
   Mi-primer-job:
     name: Mi primer job
-    runs-on: [ubuntu-latest, windows-latest, macOS-latest]
+    runs-on: ubuntu-latest
     outputs:
       salida: ${{ steps.imprimir.outputs.respuesta }}
     steps:
@@ -18,7 +12,6 @@ jobs:
       env:
         MI_VARIABLE: Hola mundo
       run: echo "::set-output name=respuesta::${MI_VARIABLE}"
-
   Mi-segundo-job:
     needs: Mi-primer-job
     name: Mi segundo job
