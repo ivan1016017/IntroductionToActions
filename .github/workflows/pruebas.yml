@@ -13,5 +13,5 @@ jobs:
       with:
           python-version: 3.8
     - name: Correr pruebas
-      run: python -m unittest -v /tests/test_persona.py
+      run: pytest -vv
       
