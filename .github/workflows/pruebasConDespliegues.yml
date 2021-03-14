@@ -1,7 +1,5 @@
 name: Pruebas unitarias
-on:
-  push:
-    branches: [ master ]
+on: [push] 
 jobs:
   job1:
     name: Pruebas
