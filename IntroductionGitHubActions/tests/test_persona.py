@@ -12,11 +12,11 @@ class PersonaTestCase(unittest.TestCase):
       self.persona2 = Persona(nombre='Diego', edad=22)
       self.persona3 = Persona(nombre='Alejandra', edad=25)
       self.persona4 = Persona(nombre='Diana', edad=25)
-      self.grupo = [self.persona1, self.persona2, self.persona3] # New
+      self.grupo = [self.persona1, self.persona2, self.persona3]
 
    def test_constructor(self):
       self.assertEqual(self.persona1.dar_nombre(), 'Alejandra')
-      self.assertEqual(self.persona1.dar_edad(), 25) # new
+      self.assertEqual(self.persona1.dar_edad(), 25)
       self.assertEqual(self.persona2.dar_edad(),22)
 
    def test_anio_nacimiento(self):
