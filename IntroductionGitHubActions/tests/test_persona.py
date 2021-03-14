@@ -16,7 +16,7 @@ class PersonaTestCase(unittest.TestCase):
 
    def test_constructor(self):
       self.assertEqual(self.persona1.dar_nombre(), 'Alejandra')
-      self.assertEqual(self.persona1.dar_edad(), 25)
+      self.assertEqual(self.persona1.dar_edad(), 25) # New
       self.assertEqual(self.persona2.dar_edad(),22) # New
 
    def test_anio_nacimiento(self):
